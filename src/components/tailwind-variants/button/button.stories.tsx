@@ -9,7 +9,7 @@ const meta: Meta<typeof Button> = {
    * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
    * to learn how to generate automatic titles
    */
-  title: 'Stitches/Button',
+  title: 'Tailwind Variants/Button',
   component: Button,
 };
 
@@ -23,21 +23,36 @@ type Story = StoryObj<typeof Button>;
  * to learn how to use render functions.
  */
 export const Primary: Story = {
-  render: () => <Button kind="primary" label="Save" />,
+  args: {
+    kind: 'primary',
+    label: 'Save',
+  },
 };
 
 export const Secondary: Story = {
-  render: () => <Button kind="secondary" label="Reset" />,
+  args: {
+    kind: 'secondary',
+    label: 'Reset',
+  },
 };
 
 export const Small: Story = {
-  render: () => <Button size="small" label="Update" />,
+  args: {
+    size: 'small',
+    label: 'Update',
+  },
 };
 
 export const Urgent: Story = {
-  render: () => <Button tone="urgent" label="Invalidate" />,
+  args: {
+    tone: 'urgent',
+    label: 'Invalidate',
+  },
 };
 
 export const Disabled: Story = {
-  render: () => <Button isDisabled label="Remove" />,
+  args: {
+    isDisabled: true,
+    label: 'Remove',
+  },
 };
